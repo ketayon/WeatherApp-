@@ -1,0 +1,113 @@
+html {
+    -webkit-text-size-adjust:none;
+    text-size-adjust:none;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust:100%;
+}
+
+body {
+    background-image: url("bg1.jpg");
+}
+
+.general-container form {
+    margin-top: 20px;
+}
+
+.general-container form label {
+    font-weight: 100;
+    color: white;
+}
+
+.title {
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    
+}
+
+.top-container {
+    padding-top: 10%;
+}
+
+.btn-orange {
+    background-color: #e8643e;
+    border: none;
+}
+
+.btn-orange:hover {
+    background-color: #de5129;
+    border: none;
+}
+
+.down{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 20px;
+}
+
+@media screen and (max-width: 1280px) {
+    body {
+        background-image: url("bg1.jpg");
+    }
+
+    .down{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    body {
+        background-image: url("bg1.jpg");
+    }
+
+    .down{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 20px;
+    }
+} 
+
+@media screen and (max-width: 992px) {
+    body {
+        background-image: url("bg1.jpg");
+    }
+
+    .down{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url("bg1.jpg");
+    }
+    
+    .down{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        background-image: url("bg1.jpg");
+    }
+    
+    .down{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 20px;
+    }
+}
+    

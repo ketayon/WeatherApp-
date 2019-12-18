@@ -1,0 +1,65 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+    <title>WEATHER</title>
+    <link rel="icon" href="media/weatherapp_images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="media/weatherapp_images/favicon.ico" type="image/x-icon"/>
+  </head>
+  <body>
+    <div class="general-container">
+        <div class="container top-container">
+            <div class="row">
+                <div class=".col-md-3 .ml-md-auto">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h1 class="title">Look at the weather in your city.
+                            Right here, right now...</h1>
+                    </div>
+                    <div>
+                        <form class="form-inline text-center" action="" method="post">
+                            <div class="form-group">
+                                {% csrf_token %}
+                                <label for="city">City</label>
+                                {{ form.name }}
+                                <input type="Submit" name="Send" value="Find" class="mt-2 btn btn-danger">
+                            </div>
+                        </form>  
+                    </div>   
+                </div>
+                <br>
+                <div class=".col-md-3 .ml-md-auto">
+                    <h2 class="title">Information</h2>
+                    {% for info in all_info %}
+                    <div class="alert alert-danger">
+                        <b>City: </b>{{ info.city }}<br>
+                        <b>Temperature: </b>{{ info.temp }}<sup>o</sup><br>
+                        <img src="http://openweathermap.org/img/w/{{ info.icon }}.png" alt="Weather photo" class="img-thumbnail">
+                        <b>Wind: </b>{{ info.wind }}<br>
+                        <b>Pressure: </b>{{ info.pressure }}<br>
+                    </div>
+                    {% endfor %}
+                </div>  
+            </div>
+        </div>
+    </div>   
+    <div class="down">
+        <footer>
+            <p class="text-right font-italic">&copy; Designed & Development by ketayon. Odessa. 2019.</p>
+        </footer>
+    </div>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+html {
+    -webkit-text-size-adjust:none;
+    text-size-adjust:none;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust:100%;
+}
+
+.navbar{
+    background-color: brown;
+    color: white;
+}
+
+.container-fluid{
+    font-size: 28px;
+}
+
+.down{
+    background-color:brown;
+}
