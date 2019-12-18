@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8_vkn+(cb$+agd^pa72-hk92@cz7gw&&8e_d=n_70aslhx2bqu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['weather-ketayon.herokuapp.com', 'localhost', '127.0.0.1']
 
